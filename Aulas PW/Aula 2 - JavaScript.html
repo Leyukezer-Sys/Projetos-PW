@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	
+	<head>
+		<title>JavaScript</title>
+	</head>
+	
+	<body>
+		<button onclick="soma()"> Clique Aqui </button>
+		
+		<form>
+			<input type="number" name="campo1" id="campo1" required="">
+			<br>
+			<input type="number" name="campo2" id="campo2">
+			<br>
+			<button onclick="soma2()"> Calcular </button>
+			<br>
+			<label id="lb01"> </label>
+		</form>
+		
+		<table border= "1" id="tabela">
+			<thead>
+				<tr>
+					<th>1º Número</th>
+					<th>2º Número</th>
+					<th>Soma</th>
+				</tr>
+			</thead>
+			
+			<tbody id="tbodyTabela">
+			</tbody>
+			
+			<tfoot id="foorTabela">
+			</tfoot>
+		</table>
+	</body>
+	
+	<script>
+		document.getElementById("tabela").style.display = "none";
+		var resultado = 0; //variavel global
+		function soma(){
+			document.getElementById("tabela").style.display = "inline-block";
+			var n1 = document.getElementById("campo1").value;
+			var n2 = document.getElementById("campo2").value;
+			var res = parseInt(n1) + parseInt(n2);
+			this.resultado = this.resultado + res;
+			lb01.innerHTML = "O resultado é " + res;
+			
+			var linha = document.createElement("tr");
+			linha.innerHTML = "<td>"+ parseInt(n1) +"</td><td>"+ parseInt(n2) +"</td><td>"+ res +"</td>";
+			documento.getElementById("tbodyTabela").appendChild(linha);
+			
+			footTabela.innerHTML = "Soma total "+ this.resultado;
+		}
+		function soma2(){
+			var n1 = document.getElementById("campo1").value;
+			var n2 = document.getElementById("campo2").value;
+			var res = parseInt(n1) + parseInt(n2);
+			lb01.innerHTML = "O resultado é " + res;
+		}
+	</script>
+</html>
