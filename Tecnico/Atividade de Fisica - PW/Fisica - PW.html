@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang='pt-Br'>
+	<head>
+		<title>Consumo Residencial</title>
+	</head>
+	
+	<style>
+		nav{
+			margin: 0px;
+			width: 100%;
+			height: auto;
+			background-color:#191970;
+			position: static;
+		}
+		ul{
+			list-style-type: none;
+			padding: 0px;
+			margin: 0px;
+			overflow:hidden;
+		}
+		nav li{
+			float: left;
+		}
+		nav a{
+			display: inline-block;
+			padding: 14px 16px;
+			color: #fff;
+			text-aling: center;
+			text-decoration: none;
+			font-family:Algerian
+		}
+		nav a:hover{
+			background-color:#8B008B;
+		}
+		body{
+			margin: 0px;
+			padding:0px;
+			background-color:#B0E0E6;
+		}
+		header{
+			width:100%;
+			height:85px;
+			background-color:#000080;
+			margin: 0px;
+		}
+		section{
+			width: 80%;
+			height:auto;
+			margin-left:10%;
+			background-color:#E0FFFF;
+		}
+		footer{
+			width:100%;
+			height:auto;
+			background-color:#000080;
+			margin: 0px;
+			text-align:justify;
+			font-family:Times New Roma;
+			font-size: 12px;
+			color:white;
+		}
+		#Titulo{
+			text-align:center;
+			font-family:Showcard Gothic;
+			color:white;
+		}
+		#formulario{
+			text-align: center;
+			font-family:Algerian;
+		}
+		#form{
+			margin-left:15%;
+			text-align: left;
+			border:1px;
+			width:70%;
+			height:auto;
+		}
+		#campo{
+			margin-left: 10%;
+			height: 80%;
+		}
+		#entradas input{
+			margin-top: 2px;
+			width:85%;
+			height: 25px;
+			border-radius: 5px;
+		}
+		.enviar{
+			margin-top:10px;
+			width:50%;
+			height:45px;
+			margin-left:19%;
+			border-radius: 15px;
+			background-color:#000080;
+			font-family:Showcard Gothic;
+			color:white;
+		}
+		.enviar:hover{
+			background-color:#8B008B;
+			}
+		.tabela{
+			width:auto;
+			height: auto;
+			margin-left:auto;
+			text-align:center;
+			font-family:Bodoni MT Black;
+		}
+		.totalTabela{
+			font-family:Times New Roma;
+		}
+		#tabela{
+			text-align:center;
+		}
+		.Secundaria{
+			background-color:#000080;
+		}
+		
+	</style>
+	
+	<body>
+	<header>
+	<div id='Titulo'>
+		<h1>Consumo Residencial</h1>
+	</div>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href='Fisica - PW - Descricao.html' class = 'Principal' >Descrição</a></li>
+			<li><a href='Fisica - PW.html' class = 'Secundaria' >Tabela de Consumos</a></li>
+		</ul>
+	</nav>
+	
+	<section>
+		<div class = "formularios">
+		<form id='formulario' action='#' method='post'>
+			<h2>Quanto seu Aparelho Gasta?</h2>
+		<fieldset id='form'>
+			<div id='campo'>
+				<label>Nome do Aparelho</label>
+				<div id='entradas'>
+					<input type='text' name='nome' id='nome' required='nome'>
+				</div>
+			</div>
+			<div id='campo'>
+				<label>Quantidade de Aparelho</label>
+				<div id='entradas'>
+					<input type='number' name='quantidade' id='quantidade' required=''>
+				</div>
+			</div>
+			<div id='campo'>
+				<label>Potência do Aparelho (W)</label>
+				<div id='entradas'>
+					<input type='number' name='potencia' id='potencia' required=''>
+				</div>
+			</div>
+			<div id='campo'>
+				<label>Horas Por Dia</label>
+				<div id='entradas'>
+					<input type='number' name='hora' id='hora' required=''>
+				</div>
+			</div>
+			<div id='campo'>
+				<label>Dias Úteis</label>
+				<div id='entradas'>
+					<input type='number' name='dia' id='dia' required=''>
+				</div>
+			</div>
+			<div id='campo'>
+				<label>Região - Tarifa</label>
+				<div id='entradas'>
+					<input type='number' name='tarifa' id='tarifa' required=''>
+				</div>
+			</div>
+			<div id='campo'>
+				<input type='button' onclick='calcularGasto()' class="enviar" value='Adicionar Na Tabela'>
+			</div>
+		</fieldset>
+		</form>
+		</div>
+		
+		<hr>
+		
+		<div class="tabela">
+		<center>
+		<table id='tabela' border='2'>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Quantidade</th>
+				<th>Potencia</th>
+				<th>Horas Por Dia</th>
+				<th>Dias Faturados</th>
+				<th>Região - Tarifa</th>
+				<th>Custo</th>
+			</tr>
+		</thead>
+		
+		<tbody id = "corpo_tabela">
+			<tr>
+			</tr>
+		</tbody>
+		
+		<tfoot>
+			<tr>
+				<th>Total Consumo</th>
+				<th><label id="lbTotal" class="totalTabela"></label></th>
+			</tr>
+		</tfoot>
+		</table>
+		</center>
+		</div>
+	</section>
+	
+	</body>
+	
+	
+	<footer>
+		<p>DESENVOLVEDORES:<br>
+		Leyukezer Cruz; Nelson Jadson Alves Machado; Thalys Alves Braga; Wasgton Gomes; Wérik Fabrício Franco Moura<br>
+		Turma:3º A Informática</p>
+	</footer>
+	
+	<script>
+		document.getElementById("tabela").style.display = "none";
+	
+		function criarLinhaTabela(nome, quant, potenc, hora, dia, tarifa, resp){
+			document.getElementById("tabela").style.display = "inline-block";
+			var corpo_tabela = document.getElementById("corpo_tabela");
+			
+			var linha = document.createElement("tr");
+			var campo_nome = document.createElement("td");
+			var campo_quantidade = document.createElement("td");
+			var campo_potencia = document.createElement("td");
+			var campo_hora = document.createElement("td");
+			var campo_dia = document.createElement("td");
+			var campo_tarifa = document.createElement("td");
+			var campo_custo = document.createElement("td");
+			
+			var texto_nome = document.createTextNode(nome);
+			var texto_quantidade = document.createTextNode(quant);
+			var texto_potencia = document.createTextNode(potenc);
+			var texto_hora = document.createTextNode(hora);
+			var texto_dia = document.createTextNode(dia);
+			var texto_tarifa = document.createTextNode(tarifa);
+			var texto_custo = document.createTextNode(resp);
+			
+			campo_nome.appendChild(texto_nome);
+			campo_quantidade.appendChild(texto_quantidade);
+			campo_potencia.appendChild(texto_potencia);
+			campo_hora.appendChild(texto_hora);
+			campo_dia.appendChild(texto_dia);
+			campo_tarifa.appendChild(texto_tarifa);
+			campo_custo.appendChild(texto_custo);
+			
+			linha.appendChild(campo_nome);
+			linha.appendChild(campo_quantidade);
+			linha.appendChild(campo_potencia);
+			linha.appendChild(campo_hora);
+			linha.appendChild(campo_dia);
+			linha.appendChild(campo_tarifa);
+			linha.appendChild(campo_custo);
+			
+			corpo_tabela.appendChild(linha);
+			
+			formulario.reset();
+		}
+		var resultado = 0;
+		function calcularTotal(valor) {
+			
+			 this.resultado = this.resultado + parseFloat(valor);
+			var result =  "R$ " + this.resultado;
+			
+			lbTotal.innerHTML = result;
+	}	
+		
+        function calcularGasto() {
+			var nom = document.getElementById("nome").value;
+			var quant = document.getElementById("quantidade").value;
+			var potenc = document.getElementById("potencia").value;
+			var hora = document.getElementById("hora").value;
+			var dia = document.getElementById("dia").value;
+			var tarifa = document.getElementById("tarifa").value;
+			
+			var soma = (parseInt(quant) * parseFloat(potenc) * parseFloat(hora) * parseInt(dia))/1000;
+			var res = parseFloat(soma) * parseFloat(tarifa);
+			var potencia = potenc + "W"
+			var tarifa1 = "R$ " + tarifa;
+			var result = "R$ " + res;
+			/*
+			lb01.innerHTML = nom;
+			lb02.innerHTML = quant;
+			lb03.innerHTML = potenc;
+			lb04.innerHTML = hora;
+			lb05.innerHTML = dia;
+			lb06.innerHTML = tarifa;
+			lb07.innerHTML = result;
+			*/
+			criarLinhaTabela(nom, quant, potencia, hora, dia, tarifa1, result);
+			calcularTotal(res);
+		}
+		
+		 
+			
+	</script>
+</html>
