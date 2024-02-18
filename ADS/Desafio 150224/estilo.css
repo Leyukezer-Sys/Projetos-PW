@@ -13,18 +13,12 @@ img {
     border-radius: 10px;
 }
 
-.textInfo {
-    font-size: 12px;
-    border-radius: 20px;
-    padding: 1% 2%;
-    background-color: hsl(330, 100%, 98%);
-}
-
 h1 {
     color: hsl(24, 5%, 18%);
     font-family: "Young Serif", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 32px;
 }
 
 h2 {
@@ -32,13 +26,11 @@ h2 {
     font-family: "Young Serif", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 24px;
 }
 
 h3 {
     color: hsl(332, 51%, 32%);
-    font-family: "Outfit";
-    font-weight: 700;
-    font-style: normal;
 }
 
 b {
@@ -84,12 +76,30 @@ td {
     padding: 15px 0px 15px 50px;
 }
 
-.info {
-    color: hsl(14, 45%, 36%);
-    font-weight: bold;
-}
-
 hr {
     border: 1px solid #ddd;
     margin: 35px 0px;
+}
+
+div {
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 1% 2%;
+    background-color: hsl(330, 100%, 98%);
+    font-family: "Outfit";
+    font-weight: 700;
+    font-style: normal;
+}
+
+div b {
+    font-size: 13px;
+}
+
+div li {
+    font-size: 12px;
+}
+
+.textInfo {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
 }
