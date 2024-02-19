@@ -103,3 +103,9 @@ div li {
     color: hsl(14, 45%, 36%);
     font-weight: bold;
 }
+
+@media (max-width: 888px) {
+    section {
+        margin: 10px;
+    }
+}
