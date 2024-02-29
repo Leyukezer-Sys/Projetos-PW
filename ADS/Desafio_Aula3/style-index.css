@@ -1,51 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: "Red Hat Display";
     font-style: normal;
 }
 
-body {
+body{
     background-image: url("./images/pattern-background-desktop.svg");
     background-color: hsl(225, 100%, 94%);
     background-repeat: no-repeat;
     background-size: 100%;
-    display: flex;
-    justify-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
-section {
+section{
     background-color: hsl(0, 0%, 98%);
-    width: 70vh;
+    margin: 10% 35%;
+    padding: 0;
     text-align: center;
     border-radius: 15px;
-    margin-top: 10%;
-    margin-bottom: 10%;display: flex;
-    justify-items: center;
-    flex-direction: column;
-    align-items: center;
 }
 
-.image {
-    height: 35vh;
+.imagem{
+    width: 100%;
     border-radius: 15px 15px 0 0;
-    background-image: url(./images/illustration-hero.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
-.image:hover {
-    height: 35vh;
-    background-image: url(./images/tenor.gif);
-    background-position: 10% 25%;
-}
-
-h1 {
+h1{
     color: hsl(223, 47%, 23%);
     font-size: 26px;
     text-transform: capitalize;
@@ -54,7 +36,7 @@ h1 {
     margin-top: 10%;
 }
 
-p {
+p{
     font-size: 16px;
     margin: 5%;
     padding: 0 15%;
@@ -62,17 +44,14 @@ p {
     color: hsla(224, 23%, 55%, 0.877);
 }
 
-.plano {
-    height: 15vh;
-    width: 60vh;
+.plano{
+    margin: 6%;
+    padding: 5%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     background-color: hsl(225, 100%, 98%);
     border-radius: 10px;
 }
-
-.plano p {
+.plano p{
     margin: 2% 0 0 auto;
     padding: 0 30% 0 5%;
     text-align: left;
@@ -80,33 +59,30 @@ p {
     font-weight: 500;
 
 }
-
-.plano strong {
+.plano strong{
     color: hsl(223, 47%, 23%);
     font-weight: bold;
 }
-
-.plano a {
+.plano a{
     margin: 5% 0 0 auto;
 
 }
-
-.plano .change {
+.plano .change{
     color: hsl(266, 75%, 52%);
     font-weight: bold;
-    cursor: pointer;
-    transition: all 0.5s;
-    &:hover {
-        filter: brightness(0.8);
+    transition: all 0.3s;
+    &:hover{
+        filter: contrast(0.6);
+        filter: brightness(0.5);
     }
 }
-
-.plano img {
-    width: 10vh;
-    align-items: center;
+.plano img{
+    width: 18%;
 }
 
-button {
+button{
+    margin: 1% 10%;
+    padding: 2% 10%;
     height: 60px;
     width: 80%;
     background-color: hsl(245, 75%, 52%);
@@ -116,30 +92,36 @@ button {
     font-weight: bold;
     font-size: 16px;
     text-align: center;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer;
     transition: all 0.3s;
-    margin-top: 5%;
-    &:hover {
-        filter: brightness(1.5);
-        filter: blur(1);
+    &:hover{
+        filter: contrast(0.6);
     }
 }
-
-.btCancel {
-    height: 10px;
+.btCancel{
+    height: 100px;
     margin: 7%;
 }
-
-.cancel {
+.cancel{
     text-decoration: none;
     font-weight: bold;
     color: hsl(224, 23%, 55%);
     margin-bottom: 50px;
-    cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    &:hover{
+        filter: contrast(0.6);
+        filter: brightness(0.5);
+    }
+}
 
-    &:hover {
-        filter: brightness(0.3);
+@media (max-width: 1080px){
+    section{
+        margin: 10% 25%;
+    }
+}
+@media (max-width: 880px){
+    section{
+        margin: 10% 10%;
     }
 }
