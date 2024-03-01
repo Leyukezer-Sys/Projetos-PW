@@ -1,7 +1,142 @@
-body{
-    background: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg"), white;
     background-repeat: no-repeat, no-repeat;
-    background-position: top left, bottom right;
-    background-clip: content-box;
-    background-size: 40%, 40%;
+    background-position: top left, bottom right, center;
+    background-size: 40%, 70%, cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 80%;
+    margin-top: 5%;
+}
+
+.topPage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulo {
+    width: 40%;
+    margin: 0;
+    height: max-content;
+}
+
+.titulo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+.titulo p {
+    font-size: 15px;
+    color: hsl(300, 13%, 45%);
+    font-weight: 400;
+}
+
+.avaliacoes {
+    width: 380px;
+    margin-left: 10%;
+}
+
+.ava {
+    flex-direction: row;
+    width: 100%;
+    background-color: hsl(300, 24%, 96%);
+    margin-bottom: 4%;
+    padding: 3% 5%;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(300, 43%, 22%);
+}
+
+#ava1 {
+    position: relative;
+    left: -10%;
+}
+
+#ava2 {
+    position: relative;
+    left: 0%;
+}
+
+#ava3 {
+    position: relative;
+    left: 10%;
+}
+
+.comentarios {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+
+.com {
+    width: 40%;
+    height: 150px;
+    margin-top: 5%;
+    margin-right: 4%;
+    background-color: hsl(300, 43%, 22%);
+    color: white;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.com .headerCom {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerCom h3 {
+    padding: 0;
+    margin: 0px 0px 0px 15px;
+}
+
+.com img {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+}
+
+.com .cer {
+    color: hsl(333, 80%, 67%);
+    padding: 0;
+    margin: 0px 0px 0px 15px;
+    font-size: 14px;
+}
+.com p{
+    font-size: 15px;
+}
+#com1{
+    position: relative;
+    top: -10%;
+}
+#com2{
+    position: relative;
+    top: 0%;
+}
+#com3{
+    position: relative;
+    top: 10%;
+}
+.botPage{
+    height: 350px;
 }
