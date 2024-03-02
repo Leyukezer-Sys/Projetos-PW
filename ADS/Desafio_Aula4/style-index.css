@@ -22,6 +22,7 @@ body {
 section {
     width: 80%;
     margin-top: 5%;
+    transition: all 0.3s;
 }
 
 .topPage {
@@ -122,21 +123,84 @@ section {
     margin: 0px 0px 0px 15px;
     font-size: 14px;
 }
-.com p{
+
+.com p {
     font-size: 15px;
 }
-#com1{
+
+#com1 {
     position: relative;
     top: -10%;
 }
-#com2{
+
+#com2 {
     position: relative;
     top: 0%;
 }
-#com3{
+
+#com3 {
     position: relative;
     top: 10%;
 }
-.botPage{
+
+.botPage {
     height: 350px;
+}
+
+@media (max-width:1080px) {
+    .topPage {
+        flex-direction: column;
+    }
+
+    .titulo {
+        width: 60%;
+    }
+
+    .avaliacoes {
+        margin-left: 0%;
+        margin-right: 10%;
+        align-items: center;
+    }
+
+    #ava1 {
+        position: relative;
+        left: 0%;
+    }
+
+    #ava2 {
+        position: relative;
+        left: 0%;
+    }
+
+    #ava3 {
+        position: relative;
+        left: 0%;
+    }
+}
+
+@media(max-width: 950px) {
+    .comentarios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #com1 {
+        top: 0%;
+    }
+
+    #com2 {
+        top: 0%;
+    }
+
+    #com3 {
+        top: 0%;
+    }
+
+    .botPage {
+        height: 850px;
+    }
+
+    .com {
+        height: max-content;
+    }
 }
