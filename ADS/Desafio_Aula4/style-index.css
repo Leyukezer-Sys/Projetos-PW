@@ -204,3 +204,8 @@ section {
         height: max-content;
     }
 }
+@media(max-width: 570px) {
+    .com {
+    width: 80%;
+}
+}
