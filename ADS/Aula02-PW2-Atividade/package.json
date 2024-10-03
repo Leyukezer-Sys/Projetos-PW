@@ -1,0 +1,14 @@
+{
+  "name": "aula02-pw2-atividade",
+  "version": "1.0.0",
+  "description": "atividades em JS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leyukezer cruz",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
