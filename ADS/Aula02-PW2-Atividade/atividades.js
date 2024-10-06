@@ -67,13 +67,36 @@ function atividade3() {
     let nota1 = parseFloat(readlineSync.question("Qual a Nota 1 do Aluno? "));
     let nota2 = parseFloat(readlineSync.question("Qual a Nota 2 do Aluno? "));
 
+    if (nota1 == null) {
+      nota1 = 0.0;
+    }
+    if (nota2 == null) {
+      nota2 = 0.0;
+    }
+    if (nota1 > 10) {
+      nota1 = nota1 / 10;
+    }
+    if (nota2 > 10) {
+      nota2 = nota2 / 10;
+    }
+    if (nota1 > 100) {
+      nota1 = nota1 / 100;
+    }
+    if (nota2 > 100) {
+      nota2 = nota2 / 100;
+    }
+
     lista_aluno.push({ matricula, nota1, nota2 });
 
     quest = readlineSync.question("Deseja adicionar outro aluno? (S/N): ");
   }
 
+  let soma_medias = 0.0;
+
   console.log("Lista dos Alunos:");
   lista_aluno.forEach((aluno) => {
+    soma_medias += (aluno.nota1 + aluno.nota2) / 2;
+
     console.log(
       `Matrícula: ${aluno.matricula} | Situação: ${situacao_Aluno(
         aluno.nota1,
@@ -81,6 +104,9 @@ function atividade3() {
       )}`
     );
   });
+
+  let media_geral = soma_medias / lista_aluno.length;
+  console.log(`Média Geral dos Alunos: ${media_geral.toFixed(1)}`);
 }
 
 function atividade4() {
@@ -114,7 +140,8 @@ function atividade5() {
   let pagamento_carlos = parseInt(total_conta / 3);
   let pagamento_andre = parseInt(total_conta / 3);
 
-  let pagamento_felipe = total_conta - parseFloat(pagamento_carlos + pagamento_andre);
+  let pagamento_felipe =
+    total_conta - parseFloat(pagamento_carlos + pagamento_andre);
 
   console.log(`Carlos Deve Pagar: R$ ${pagamento_carlos.toFixed(2)}`);
   console.log(`André Deve Pagar: R$ ${pagamento_andre.toFixed(2)}`);
