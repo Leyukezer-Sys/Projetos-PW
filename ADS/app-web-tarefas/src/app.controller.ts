@@ -49,4 +49,5 @@ export class AppController {
     req.logout();
     res.redirect('/');
   }
+
 }
