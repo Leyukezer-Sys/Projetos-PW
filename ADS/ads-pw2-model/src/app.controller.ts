@@ -7,11 +7,4 @@ export class AppController {
   home() {
     return {};
   }
-
-  @Get('/about-us')
-  @Render('about-us/sobre')
-  index() {
-    return {};
-  }
-
 }
