@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Meu Site</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      @keyframes rgb-border {
+        0% {
+          text-shadow: 0 0 5px red, 0 0 10px red;
+        }
+        25% {
+          text-shadow: 0 0 5px blue, 0 0 10px blue;
+        }
+        50% {
+          text-shadow: 0 0 5px green, 0 0 10px green;
+        }
+        75% {
+          text-shadow: 0 0 5px yellow, 0 0 10px yellow;
+        }
+        100% {
+          text-shadow: 0 0 5px red, 0 0 10px red;
+        }
+      }
+
+      .text-rgb {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white; /* Mantém o texto visível */
+        text-shadow: 0 0 5px red, 0 0 10px red; /* Inicial */
+        animation: rgb-border 2s infinite linear;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="d-flex flex-column position-relative">
+        <img src="./assets/header.jpg" alt="Header" class="img-fluid" />
+        <h1 class="position-absolute top-50 start-50 translate-middle text-rgb">
+          Bem Vindo!
+        </h1>
+      </div>
+    </header>
+
+    <nav class="p-3 mb-2 bg-dark text-white">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#" class="nav-link active fw-bold" aria-current="page">Início</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle "
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Contato
+          </a>
+          <div class="dropdown-menu dropdown-menu-dark">
+            <a class="dropdown-item" href="https://wa.me/5569993542265">
+              <img src="./assets/whatsapp.png" alt="WhatsApp" width="18px" />
+              WhatsApp
+            </a>
+            <div class="dropdown-divider"></div>
+            <a
+              class="dropdown-item"
+              href="https://www.instagram.com/leyukezer/"
+            >
+              <img src="./assets/instagram.png" alt="Instagram" width="20px" />
+              Instagram
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Formulário</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container-xl flex justify-items-center align-items-center">
+      <section class="flex align-items-center justify-center">
+        <div
+          class="container-sm d-flex flex-row max-[600px]:flex-column gap-5 rounded-5 shadow"
+        >
+          <div class="d-flex flex-column justify-content-center">
+            <h1>Assistencia ao Site</h1>
+            <p>
+              Aqui posso te dar o que precisa em pouco tempo com rapida entrega
+              e ótima eficiencia
+            </p>
+          </div>
+          <div class="d-flex align-items-center justify-items-center">
+            <img
+              src="./assets/container-1.jpg"
+              alt=""
+              class="img-fluid rounded-circle"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-4">
+      © 2025 LCL Tecnologia - Todos os direitos reservados.
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
